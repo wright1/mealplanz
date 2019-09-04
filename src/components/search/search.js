@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-const About = () => {
+const Search = () => {
     return(
         <div>
-            ABOUT
+            SEARCH PAGE
         </div>
     )
 }
 
-export default About
+export default Search
