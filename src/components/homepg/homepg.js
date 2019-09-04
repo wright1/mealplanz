@@ -3,15 +3,16 @@ import styled from 'styled-components'
 
 
 const Section = styled.section`
-height: 100vh;
+height: 90vh;
 width: 100vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-background-color: #fffaea;
+color: #515151;
 font-family: 'Oswald', sans-serif;
 font-size: 3em;
+overflow: hidden;
 `
 
 

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import  HomePage from './components/homepg/homepg'
 import About from './components/about/about'
 import Dashboard from './components/dashboard/dashboard'
+import GlobalStyles from './components/styles/globalStyle'
 import Search from './components/search/search'
 import Nav from './components/shared/nav'
 
@@ -12,6 +13,7 @@ function App() {
     <div>
    
     <Router>
+      <GlobalStyles />
     <Nav />
     <Switch>
     <Route exact path='/' component={ HomePage } />
