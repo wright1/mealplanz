@@ -1,10 +1,12 @@
 import React from 'react'
+import Searchbar from './searchbar'
 
 
 const Search = () => {
     return(
         <div>
-            SEARCH PAGE
+            <Searchbar />
+            
         </div>
     )
 }
