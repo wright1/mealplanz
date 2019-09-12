@@ -50,7 +50,7 @@ const Searchbar = React.forwardRef(({onChange, disabled, onClick }, ref) => {
             />
             <button
             disabled={ disabled }
-            onClick={ onClick }
+            onClick={(e) => onClick(e) }
             >Search</button>
             <span ref={ ref }>Invalid entry <br /> Please enter a number</span>
         </Form>
