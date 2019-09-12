@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import Searchbar from './searchbar'
+import validate from '../../utils/validate'
 
 
 const Search = () => {
+
+    const [input, setInput] = useState('');
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+
+    })
+
+    const warningRef = createRef();
+
+    const handleChange = e => {
+
+        let str = e.target.value;
+        //warning message appears if str is not a number
+        validate(str) ? warningRef.current.style.display='none': warningRef.current.style.display= 'initial'
+
+        setInput(str)
+    }
+
     return(
         <div>
-            <Searchbar />
+            <Searchbar
+            onChange={ handleChange }
+            disabled={ !validate(input)}
+            ref={ warningRef }
+             />
             
         </div>
     )

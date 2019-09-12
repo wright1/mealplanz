@@ -23,6 +23,7 @@ margin-top: 3vh;
 }
 >button{
     height: 8vh;
+    margin-right: 1vw;
     border: none;
     border-bottom: 2px solid grey;
     border-radius: 3px;
@@ -30,19 +31,33 @@ margin-top: 3vh;
     font-weight: 300;
     outline: none;
 }
+>span{
+    display: none;
+    font-family: 'Open Sans', sans serif;
+    font-weight: 400;
+    color: red;
+    
+}
 
 `
 
-const Searchbar = () => {
+const Searchbar = React.forwardRef(({onChange, disabled, onClick }, ref) => {
     return(
         <Form>
-            <input type='search' placeholder='enter the max amount of calories for recipe' />
-            <button>Search</button>
+            <input type='search' 
+            placeholder='enter the max amount of calories for recipe'
+            onChange={ (e) => onChange(e) } 
+            />
+            <button
+            disabled={ disabled }
+            onClick={ onClick }
+            >Search</button>
+            <span ref={ ref }>Invalid entry <br /> Please enter a number</span>
         </Form>
 
         
     )
-}
+})
 
 export default Searchbar
 
